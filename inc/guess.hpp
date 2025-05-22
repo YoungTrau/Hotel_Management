@@ -24,8 +24,8 @@ class Guess{
         //ham tao khoi tao du lieu cho khach dat phong
         Guess(const int& room,const string& name,const string& phone ,const string& checkin) : 
         room(room),name(name),phone(phone),checkin(checkin){
-            guess_feedback[NONE_FEEDBACK] = "chua co danh gia";
-            checkout = "khong co thong tin";
+            guess_feedback[NONE_FEEDBACK] = "No feedback";
+            checkout = "No info";
         } 
         void setCheckOut(string& guess_checkout) {checkout = guess_checkout;}
         void setService(string name_service){guess_service = name_service;}

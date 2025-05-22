@@ -173,9 +173,11 @@ bool EmployeeManager::addEmployee(vector<Account> &accountList, const string &na
         return pass;
     };
 
+    string password = generateRandompassword();
+
     // Tự động đăng ký tài khoản cho nhân viên
-    Account::registerAccount(accountList, phoneNumber, generateRandompassword());
-    UI::showMessage("The employee account has been registered with a default password " + generateRandompassword());
+    Account::registerAccount(accountList, phoneNumber, password);
+    UI::showMessage("The employee account has been registered with a default password " + password);
     return SUCCESS;
 }
 
